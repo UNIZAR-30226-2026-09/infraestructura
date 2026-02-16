@@ -1,0 +1,17 @@
+services:
+  backend:
+    # Usar Dockerfile de backend
+    build: ../backend
+
+    container_name: soberania_backend
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ../backend:/app
+
+    env_file:
+      - .env
+
+    restart: on-failure
