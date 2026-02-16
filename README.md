@@ -17,7 +17,7 @@ raiz/
 ## 2. Configuración (`.env`)
 
 1. Entra en `infraestructura/`.
-2. Crea una copia de `.env.example` llamada `.env`. (**Nunca se sube el .env al repositorio**)
+2. Crea una copia de `.env.examples` llamada `.env`. (**Nunca se sube el .env al repositorio**)
 3. Edita `.env` y configura la URL de Neon correcta.
 
 
@@ -36,6 +36,5 @@ Desde la carpeta `infraestructura/`, ejecuta:
 | **Ver estado** | `docker compose ps` |
 | **Parar todo** | `docker compose down` |
 
-
-
-
+## 4. Github
+Ver las normas completas en [GITHUB.md](./GITHUB.md)
