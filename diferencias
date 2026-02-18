@@ -1,0 +1,31 @@
+diff --git a/GITHUB.md b/GITHUB.md
+index 5ede778..8a021da 100644
+--- a/GITHUB.md
++++ b/GITHUB.md
+@@ -10,15 +10,23 @@
+ 
+ ## 2. Estrategia de Ramas
+ 
+-Utilizaremos tres niveles de ramas para separar el desarrollo de las versiones de entrega:
++Utilizaremos dos ramas remotas principales y, opcionalmente, ramas locales para tareas específicas:
+ 
+ | Rama | Propósito | 
+ | --- | --- |
+ | `main` | **Producción / Hitos**: Solo contiene versiones terminadas (Hitos u otras fechas señaladas). | 
+ | `develop` | **Integración**: Rama principal de trabajo diario. Aquí se une el código de todos. | 
+-| `feature/` | **Tareas**: Ramas temporales para requisitos específicos (ej: `feature/login`). | 
++| `feature/` (opcional) | **Tareas locales**: Ramas temporales para desarrollar funcionalidades o cambios sin afectar `develop`. Ej: `feature/login`. |
++
++El código desarrollado se sube a develop, y solo cuando el proyecto es estable, se pasa a main
++
++> **Uso de `feature/` opcional:**
++>
++> 1. Crear rama local `feature/*` para trabajar sin tocar `develop`.
++> 2. Hacer commits atómicos y claros en la rama `feature`.
++> 3. Cuando esté listo, mergear localmente los cambios en `develop`.
++> 4. Solo `develop` y `main` existen en el remoto; las ramas `feature/` pueden quedarse locales.
+ 
+-El código se desarrolla en `feature/`, se sube a `develop` para integrar, y solo cuando el proyecto es estable, se pasa a `main`.
+ 
+ ## 3. Sincronización Diaria (Obligatorio)
+ 
